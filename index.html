@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Device Pixel Ratio Test</h1>
+	<hr>
+	<p>Device Pixel Ratio: <span id="dpr">---</span></p>
+	<hr>
+
+	<h2></h2>
+	<img src="./cat_200x300.jpg" alt="" width="400" height="600">
+	<hr>
+
+	<h2></h2>
+	<img src="./cat_400x600.jpg" alt="" width="400" height="600">
+	<hr>
+
+	<h2></h2>
+	<img src="./cat_600x900.jpg" alt="" width="400" height="600">
+	<hr>
+
+	<h2></h2>
+	<img src="./cat_900x1350.jpg" alt="" width="400" height="600">
+	<hr>
+
+	<script>
+		const dpr = document.getElementById("dpr");
+		dpr.textContent = devicePixelRatio;
+	</script>
+</body>
+</html>
