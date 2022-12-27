@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Device Pixel Ratio</title>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		.grid {
+			display: grid;
+			gap: 8px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.item {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			align-items: center;
+			border-radius: 8px;
+			border: solid 1px gray;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Device Pixel Ratio Test</h1>
+	<hr>
+	<p>Device Pixel Ratio: <span id="dpr">---</span></p>
+	<hr>
+
+	<div class="grid">
+
+		<div class="item">
+			<h2>100x150 (0.5)</h2>
+			<img src="./images/cat_100x150.jpg" alt="" width="200" height="300">
+		</div>
+
+		<div class="item">
+			<h2>200x300 (1)</h2>
+			<img src="./images/cat_200x300.jpg" alt="" width="200" height="300">
+		</div>
+
+		<div class="item">
+			<h2>300x450 (1.5)</h2>
+			<img src="./images/cat_300x450.jpg" alt="" width="200" height="300">
+		</div>
+
+		<div class="item">
+			<h2>400x600 (2)</h2>
+			<img src="./images/cat_400x600.jpg" alt="" width="200" height="300">
+		</div>
+
+		<div class="item">
+			<h2>500x750 (2.5)</h2>
+			<img src="./images/cat_500x750.jpg" alt="" width="200" height="300">
+		</div>
+
+		<div class="item">
+			<h2>600x900 (3)</h2>
+			<img src="./images/cat_600x900.jpg" alt="" width="200" height="300">
+		</div>
+
+	</div>
+
+	<script>
+		const dpr = document.getElementById("dpr");
+		dpr.textContent = devicePixelRatio;
+	</script>
+</body>
+</html>
