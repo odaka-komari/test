@@ -5,41 +5,41 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Device Pixel Ratio</title>
-	<style>
-		body {
-			margin: 0;
-		}
-
-		.grid {
-			display: grid;
-			gap: 8px;
-			grid-template-columns: repeat(auto-fill, 100px);
-			justify-content: center;
-		}
-
-		.item {
-			display: flex;
-			flex-direction: column;
-			gap: 4px;
-			align-items: center;
-			border-radius: 8px;
-			border: solid 1px gray;
-			overflow: hidden;
-		}
-
-		.item h2 {
-			font-weight: normal;
-			font-size: 10px;
-		}
-
-	</style>
+	<link rel="stylesheet" href="./style.css">
+	<script src="./script.js" defer></script>
 </head>
 <body>
 	<h1>Device Pixel Ratio Test</h1>
 	<hr>
-	<p>Device Pixel Ratio: <span id="dpr">---</span></p>
+	<table>
+		<tr>
+			<th>Device Pixel Ratio</th>
+			<td id="device_pixel_ratio">---</td>
+		</tr>
+		<tr>
+			<th>Screen Width</th>
+			<td id="screen_width">---</td>
+		</tr>
+		<tr>
+			<th>Screen Height</th>
+			<td id="screen_height">---</td>
+		</tr>
+		<tr>
+			<th>Window Width</th>
+			<td id="window_width">---</td>
+		</tr>
+		<tr>
+			<th>Window Height</th>
+			<td id="window_height">---</td>
+		</tr>
+	</table>
 	<hr>
-	<p>画像の表示サイズは100 x 150です。各画像の上に表示しているサイズは画像自体の実際のサイズです。</p>
+	<p>
+		画像の表示サイズは100 x 150です。<br>
+		各画像の上に表示しているサイズは画像自体の実際のサイズです。<br>
+		<br>
+		「Device Pixel Ratio」は「CSSピクセル」1つに対して「物理ピクセル」がいくつ使われているかの比率です。
+	</p>
 	<hr>
 
 	<div class="grid">
@@ -96,9 +96,5 @@
 
 	</div>
 
-	<script>
-		const dpr = document.getElementById("dpr");
-		dpr.textContent = devicePixelRatio;
-	</script>
 </body>
 </html>

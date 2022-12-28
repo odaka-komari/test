@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	padding: 8px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid;
+}
+
+th, td {
+	padding: 4px;
+	border: 1px solid;
+}
+
+th {
+	text-align: left;
+}
+
+td {
+	text-align: right;
+}
+
+.grid {
+	display: grid;
+	gap: 8px;
+	grid-template-columns: repeat(auto-fill, 100px);
+	justify-content: center;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: center;
+	border-radius: 8px;
+	border: solid 1px gray;
+	overflow: hidden;
+}
+
+.item h2 {
+	font-weight: normal;
+	font-size: 10px;
+}
